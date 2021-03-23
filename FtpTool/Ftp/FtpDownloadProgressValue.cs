@@ -6,6 +6,7 @@ namespace InductionTest.FtpTool.Ftp
     /// <summary>
     /// Information about progress of asynchronous download operation with <see cref="FtpFile"/>.
     /// </summary>
+    [Obsolete]
     public class FtpDownloadProgressValue : IProgress<long>
     {
         public FtpDownloadProgressValue(FtpFile file, IProgress<FtpDownloadProgressValue> progress)

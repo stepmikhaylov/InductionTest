@@ -32,9 +32,9 @@ namespace InductionTest.FtpTool
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.contentListView = new System.Windows.Forms.ListView();
-            this.nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.sizeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nameColumnHeader = new System.Windows.Forms.ColumnHeader();
+            this.sizeColumnHeader = new System.Windows.Forms.ColumnHeader();
+            this.dateColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.contentContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainToolStrip = new System.Windows.Forms.ToolStrip();
@@ -58,9 +58,10 @@ namespace InductionTest.FtpTool
             this.contentListView.FullRowSelect = true;
             this.contentListView.HideSelection = false;
             this.contentListView.Location = new System.Drawing.Point(0, 25);
+            this.contentListView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.contentListView.MultiSelect = false;
             this.contentListView.Name = "contentListView";
-            this.contentListView.Size = new System.Drawing.Size(686, 365);
+            this.contentListView.Size = new System.Drawing.Size(800, 425);
             this.contentListView.TabIndex = 0;
             this.contentListView.UseCompatibleStateImageBehavior = false;
             this.contentListView.DoubleClick += new System.EventHandler(this.contentListView_DoubleClick);
@@ -104,7 +105,7 @@ namespace InductionTest.FtpTool
             this.viewToolStripComboBox});
             this.mainToolStrip.Location = new System.Drawing.Point(0, 0);
             this.mainToolStrip.Name = "mainToolStrip";
-            this.mainToolStrip.Size = new System.Drawing.Size(686, 25);
+            this.mainToolStrip.Size = new System.Drawing.Size(800, 25);
             this.mainToolStrip.TabIndex = 1;
             this.mainToolStrip.Text = "mainToolStrip";
             // 
@@ -142,7 +143,7 @@ namespace InductionTest.FtpTool
             // 
             this.uriToolStripComboBox.DropDownWidth = 121;
             this.uriToolStripComboBox.Name = "uriToolStripComboBox";
-            this.uriToolStripComboBox.Size = new System.Drawing.Size(300, 25);
+            this.uriToolStripComboBox.Size = new System.Drawing.Size(349, 25);
             this.uriToolStripComboBox.SelectedIndexChanged += new System.EventHandler(this.uriToolStripComboBox_SelectedIndexChanged);
             this.uriToolStripComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uriToolStripComboBox_KeyDown);
             // 
@@ -150,17 +151,18 @@ namespace InductionTest.FtpTool
             // 
             this.viewToolStripComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.viewToolStripComboBox.Name = "viewToolStripComboBox";
-            this.viewToolStripComboBox.Size = new System.Drawing.Size(104, 25);
+            this.viewToolStripComboBox.Size = new System.Drawing.Size(121, 25);
             this.viewToolStripComboBox.SelectedIndexChanged += new System.EventHandler(this.viewToolStripComboBox_SelectedIndexChanged);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 390);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.contentListView);
             this.Controls.Add(this.mainToolStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainForm";
             this.Text = "FTP Tool";
             this.contentContextMenuStrip.ResumeLayout(false);
